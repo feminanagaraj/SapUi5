@@ -1,0 +1,11 @@
+<core:FragmentDefinition
+	xmlns="sap.m"
+	xmlns:core="sap.ui.core"
+	xmlns:u="sap.ui.unified"
+	controllerName="scs.view.menu">
+		<Panel  id="handleMenuItemPress">
+			<Text text="Home" icon="sap-icon://home" id="backToHome"/>
+			<Text text="Facility" icon="sap-icon://globe"/>
+			<Text text="Logout" icon="sap-icon://log"/>
+		</Panel>
+</core:FragmentDefinition>	

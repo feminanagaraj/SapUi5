@@ -1,0 +1,66 @@
+<core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:l ="sap.ui.commons.layout"
+		controllerName="demo.SecondView" xmlns:html="http://www.w3.org/1999/xhtml">
+	<Page title="Second View" design = "Bold" showNavButton = "true" navButtonTab = "onBack">
+	<content>
+    <Panel headerText = "Employee Form"  expandable = "true" expanded = "true">
+    <l:MatrixLayout id = "myLayout" columns="4" width = "100%" widths = "25%,25%,25%,25%">
+	
+	<l:MatrixLayoutRow>
+			 <l:MatrixLayoutCell>
+			     <Label text = "Enter the Employee Id"></Label>
+			 </l:MatrixLayoutCell>  
+			 <l:MatrixLayoutCell>
+			     <Input width = "50%"></Input>
+			 </l:MatrixLayoutCell>
+			 
+			 
+	</l:MatrixLayoutRow>
+  
+  <l:MatrixLayoutRow>
+			 <l:MatrixLayoutCell>
+			     <Label text = "Enter the Employee Name"></Label>
+			 </l:MatrixLayoutCell>  
+			 <l:MatrixLayoutCell>
+			     <Input></Input>
+			 </l:MatrixLayoutCell>
+			 <l:MatrixLayoutCell>
+			     <Label text = "Enter the Employee Designation"></Label>
+			 </l:MatrixLayoutCell>  
+			 <l:MatrixLayoutCell>
+			     <Input></Input>
+			 </l:MatrixLayoutCell>
+			  
+	</l:MatrixLayoutRow>
+	
+	<l:MatrixLayoutRow>
+			 
+			 
+			 <l:MatrixLayoutCell>
+			     <Label text = "Enter the Employee Email"></Label>
+			 </l:MatrixLayoutCell>  
+			 <l:MatrixLayoutCell>
+			     <Input></Input>
+			 </l:MatrixLayoutCell>
+			 <l:MatrixLayoutCell>
+			     <Label text = "Enter the Employee Phone"></Label>
+			 </l:MatrixLayoutCell>  
+			 <l:MatrixLayoutCell>
+			     <Input></Input>
+			 </l:MatrixLayoutCell>
+			  
+	
+	</l:MatrixLayoutRow>
+	<l:MatrixLayoutRow>
+	<l:MatrixLayoutCell>
+			     <Label text = "Enter the Employee Pincode"></Label>
+			 </l:MatrixLayoutCell>  
+			 <l:MatrixLayoutCell colSpan ="3">
+			     <Input></Input>
+			 </l:MatrixLayoutCell>
+  </l:MatrixLayoutRow>
+  </l:MatrixLayout>
+ 
+</Panel>
+</content>
+	</Page>
+</core:View>

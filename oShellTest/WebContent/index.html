@@ -1,0 +1,109 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta http-equiv='Content-Type' content='text/html;charset=UTF-8'/>
+		
+
+		<script src="resources/sap-ui-core.js" 
+		         id="sap-ui-bootstrap"  
+		         data-sap-ui-libs="sap.m,sap.ui.commons,sap.ui.unified,sap.ui.ux3" 
+		         data-sap-ui-theme="sap_bluecrystal">		
+		</script>
+		<script>
+		
+		sap.ui.localResources("oshell"); 
+		
+		jQuery.sap.require("sap.ui.core.routing.Router");
+		jQuery.sap.require("sap.ui.core.routing.HashChanger");
+		
+		var oShell = sap.ui.ux3.Shell("shellId" ,{
+		        showSearchTool : false,
+		    	showFeederTool : false,
+			    worksetItems : [
+				                new sap.ui.ux3.NavigationItem("pageId",{
+				                	key : "App",
+				                	text : "SplitApp"
+				                }),
+				                new sap.ui.ux3.NavigationItem("page2Id",{
+				                	key : "page2",
+				                	text : "Normal"
+				                })
+				                ], 
+	            
+		 worksetItemSelected : function(e) {
+				this.removeAllContent(); 
+				var selected = e.getParameter("key");
+			/* 	var view = sap.ui.getCore().byId(selected);
+				
+				if (view == undefined){
+					console.log("New view rendering")
+					view = new sap.ui.view({
+						id : selected,
+						viewName : "oshell." + selected,
+						type : sap.ui.core.mvc.ViewType.JS
+						
+					})
+					
+				} 
+				else{
+					console.log("old view");
+					
+				}
+				
+				 this.addContent(view);  */
+				 var oHashChanger = new sap.ui.core.routing.HashChanger();
+				 oHashChanger.setHash(router.getURL(selected));
+				
+			}, 
+		
+		content : [new sap.ui.view({
+			id : "viewId",
+			 viewName : "oshell.App", 
+			
+			
+			type:sap.ui.core.mvc.ViewType.JS
+		})]
+			
+		});
+		
+		oShell.placeAt("container");
+			
+		
+		var router = new sap.ui.core.routing.Router([
+            {
+            	
+            	 pattern : "",
+            	 name: "App", 
+            	 view : "oshell.App",
+           		 viewType : sap.ui.core.mvc.ViewType.JS,
+                 targetControl: "shellId",
+                 targetAggreation: "content",
+                 clearTarget : true,
+                	 callback : function(){
+                		 oShell.setSelectedWorksetItem("pageId");
+                		 
+                	 }
+            },		  
+            {
+           	 name: "page2",
+           	 pattern :["page2" , "page2"] ,
+           	 view : "oshell.page2",
+          		 viewType : sap.ui.core.mvc.ViewType.JS,
+                targetControl: "shellId",
+                targetAggreation: "content",
+                clearTarget : true,
+               	 callback : function(){
+               	 oShell.setSelectedWorksetItem("page2Id");
+               	 }            
+           }            
+             ]);
+		router.register("appRouter");
+		router.initialize();
+		</script>
+
+	</head>
+	<body class="sapUiBody" role="application">
+		<div id="container"></div>
+	</body>
+</html>

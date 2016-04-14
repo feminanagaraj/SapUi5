@@ -1,0 +1,24 @@
+<core:View  xmlns:core="sap.ui.core" 
+			xmlns:mvc="sap.ui.core.mvc" 
+			xmlns="sap.ui.commons"
+			xmlns:m ="sap.m"
+			xmlns:l="sap.ui.layout" 
+			controllerName="treenode.demo" 
+			xmlns:html="http://www.w3.org/1999/xhtml">
+
+<Tree id="tree1" title = "Explorer" >
+		<TreeNode id="node1" text = "Computer" expanded = "false" selectable = "false">
+				<nodes>
+						<TreeNode id="node2" text = "OSDisk (C:)" >
+								<nodes>
+										<TreeNode id="node3" text = "Program Files" ></TreeNode>
+										<TreeNode id="node4" text = "Windows" ></TreeNode>
+								</nodes>
+						</TreeNode>
+						<TreeNode id="node5" text = "Mass Storage (USB)" expanded = "true"></TreeNode>
+				</nodes>
+		</TreeNode>
+		
+		<TreeNode id="node6" text = "Network" ></TreeNode>
+</Tree>
+</core:View>

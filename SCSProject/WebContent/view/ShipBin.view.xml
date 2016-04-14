@@ -1,0 +1,97 @@
+<core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:l="sap.ui.layout" xmlns:t="sap.ui.table"
+		controllerName="scs.view.ShipBin" xmlns:html="http://www.w3.org/1999/xhtml">
+	<Page id="page" showHeader="false" title="Ship Bins" class="Background" showNavButton="true" navButtonTap="backtoroom">
+	    <Toolbar class="BGCLR">
+	        <Button icon="sap-icon://nav-back" press="backtoroom"></Button>
+   		 	<ToolbarSpacer/>
+           	<Image src="images/scslogo.png" width="75px"></Image>
+            <ToolbarSpacer/>
+            <Button icon="sap-icon://menu2" id="openMenu" press="handlePressOpenMenu" ></Button>
+        </Toolbar>
+        <l:VerticalLayout width="100%">
+			<l:content>
+			</l:content>
+			<l:dependents>
+				<core:Fragment fragmentName="scs.view.menu" type="XML">
+				</core:Fragment>
+			</l:dependents>
+		</l:VerticalLayout>
+	    <content>
+		<!-- use this to make the table occupy the available screen height -->
+			
+			<!-- <Label text="Select One Or More Bins FromTable" design="Bold"></Label> -->
+			<Panel width="90%" class="MRG5PX">
+			    <Text text="Ship Bins" class="txtalign" design="Bold"/>	
+				<Table id="idProductsTable"
+					mode="MultiSelect"
+					items="{/Products}"	
+					selectionChange ="attachSelectionChange">
+					<columns>
+						<Column width ="20px">
+							<Text text="ID" key="1"/>
+						</Column>
+						<Column>
+							<Text text="Product" key="2"/>
+						</Column>
+						<Column
+							hAlign="Center">
+							<Text text="Quantity" key="3"/>
+						</Column>
+						<Column
+							hAlign="Center">
+							<Text text="Rating" key="4"/>
+						</Column>
+					</columns>
+					<items>
+						<ColumnListItem vAlign="Middle">
+							<cells>
+								<ObjectIdentifier title="{ID}" />
+								
+								<ObjectIdentifier title="{Name}" />
+								
+								<Input value="{Quantity}"/>
+			
+								<ObjectIdentifier text="{Rating}" />
+							</cells>
+						</ColumnListItem>
+					</items>
+				</Table>
+				<!-- <t:Table id="idProductsTable"
+					rows="{/Products}"
+					selectionMode="MultiToggle"
+					visibleRowCount="7"
+					rowSelectionChange="attachSelectionChange">
+					<t:columns>
+						<t:Column>
+							<Label text="Product Name" />
+							<t:template>
+								<Text text="{Name}"/>
+							</t:template>
+						</t:Column>
+						<t:Column>
+							<Label text="Product Id" />
+							<t:template>
+								<Input value="{ID}"/>
+							</t:template>
+						</t:Column>
+						<t:Column hAlign="End">
+							<Label text="Quantity" />
+							<t:template>
+								<Label text="{Quantity}" />
+							</t:template>
+						</t:Column>
+					</t:columns>
+				</t:Table> -->
+				<Bar>
+					<contentMiddle>
+						<Button text="Save" type="Reject" class="BTNCLR">
+						</Button>
+			
+						<Button text="0 Bins Selected" type="Reject" class="BTNCLR" id="rowCount">
+						</Button>
+					</contentMiddle>
+				</Bar>
+			</Panel>
+		</content>
+	</Page>
+</core:View>

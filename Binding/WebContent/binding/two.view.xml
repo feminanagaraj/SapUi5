@@ -1,0 +1,34 @@
+<core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:f = "sap.ui.layout.form"
+		controllerName="JsonModel.two" xmlns:html="http://www.w3.org/1999/xhtml">
+	<Page title="Title">
+		<content>
+	
+	<f:SimpleForm  title = "Employe Form" maxContainerCols = "1 " editable = "true">
+	<f:content>
+	    <core:Title text ="Employee Details"></core:Title>		
+		  <Label text = "Enter the Employee ID" required = "true"></Label>
+		  <Input id="idempid" width = "300px" liveChange="onEventEmpId"></Input>
+		  
+		  <Label text = "Enter the Employee Name" required = "true"></Label>
+		  <Input id="idempname" width = "300px" liveChange="onEventEmpId"></Input>
+		  
+		  <Label text = "Enter the Employee Designation" required = "true"></Label>
+		  <Input id="idempdesign" width = "300px" liveChange="onEventEmpId"></Input>
+		  
+	    <core:Title text ="Employee Contact" ></core:Title>		
+		  <Label text = "E-Mail" required = "true"></Label>
+		  <Input id="idempmail" width = "300px" liveChange="onEventEmpId"></Input>
+		  
+		  <Label text = "Phone Number" type = "Number" required = "true"></Label>
+		  <Input id="idempphone" width = "300px" liveChange="onEventEmpId"></Input>
+		  
+		  
+		  <Label text = "Date Of Birth" required = "true"></Label>
+		  <DateTimeInput id ="iddob" type = "Date" placeholder ="Enter Date of Birth..." 
+		                 displayFormat ="dd-MM-yyyy" valueFormat ="yyyyMMdd" width ="300px" fireChange="onEventEmpId"/>
+		</f:content>
+	</f:SimpleForm>
+	
+		</content>
+	</Page>
+</core:View>

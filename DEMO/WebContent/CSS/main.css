@@ -1,0 +1,9 @@
+.MyBackgroundColor
+{
+	background-color : RGB(122,128,125);
+}
+
+.MyBackgroundImage
+{
+	background-image : url('../image/abcd.jpg');
+}

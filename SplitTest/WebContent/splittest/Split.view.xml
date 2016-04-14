@@ -1,0 +1,129 @@
+<core:View xmlns:core="sap.ui.core" 
+           xmlns:mvc="sap.ui.core.mvc" 
+           xmlns="sap.ui.commons"
+           xmlns:m="sap.m"
+           xmlns:f= "sap.ui.layout.form"
+           xmlns:t = "sap.ui.table"
+		   controllerName="splittest.Split" 
+		   xmlns:html="http://www.w3.org/1999/xhtml"
+		   xmlns:l="sap.ui.layout">
+		 <l:HorizontalLayout >
+			<Button text="Manager" ></Button>
+			<Button text="Self Services"></Button>
+			<Button text="Tax Statement"></Button>
+			<Button text="Flexi Pay Plan"></Button>
+			<Button text="User Administration"></Button>
+			<Button text="Policies Upload"></Button>
+			<Button text="Content Administration"></Button>
+			<Button text="System Administration"></Button>
+			<Button text="Policies and Newsletters"></Button>
+	    </l:HorizontalLayout>
+		
+		
+		<l:Splitter width="90%">
+		
+			<m:Panel  width="100%">
+		
+				<m:VBox>
+					<m:Label text = "Manager Approval">
+					
+					</m:Label>
+					<m:Label text = "Leave History"></m:Label>
+				</m:VBox>
+				
+			</m:Panel>
+		
+			<m:Panel headerText = "Managers Approval" class = "panelColor">
+	     		<m:Label text = "Attendace/Absence Requests for Approval"/>
+	     	
+	     
+	     <f:SimpleForm  maxContainerCols = "1" editable = "true"> 
+	     <f:content >
+	     <m:Label text = "Department" />
+		 <m:Input id="idDept"  editable = "true" width = "50px"/>
+	      
+		 </f:content>
+	     </f:SimpleForm>
+	     <m:Panel   width="100%">
+		 <t:Table id = "idtab"       
+		          title = "New Requests"
+	              selectionMode = "Single" 
+	              navigationMode = "Scrollbar" 
+	              selectionBehavior = "Row" 
+	              rowSelectionChange = "onRowSelect" >
+	             
+		<t:Column width = "132px">
+		    <m:Label text = "Leave Request ID" />
+		    <t:template>
+		        <m:Text text = " "/>
+		    </t:template>
+		</t:Column>
+		<t:Column width = "110px">
+		    <m:Label text = "Request Date" />
+		    <t:template>
+		        <m:Text text = " "/>
+		    </t:template>
+		</t:Column>
+		<t:Column width = "60px">
+		    <m:Label text = "Name" />
+		    <t:template>
+		        <m:Text text = " "/>
+		    </t:template>
+		</t:Column>
+		<t:Column width = "138px">
+		    <m:Label text = "Department Name" />
+		    <t:template>
+		        <m:Text text = " "/>
+		    </t:template>
+		</t:Column>
+		<t:Column width = "133px">
+		    <m:Label text = "Type of Request" />
+		    <t:template>
+		        <m:Text text = " "/>
+		    </t:template>
+		</t:Column>
+		<t:Column width = "100px">
+		    <m:Label text = "Start Date" />
+		    <t:template>
+		        <m:Text text = " "/>
+		    </t:template>
+		</t:Column>
+		<t:Column width = "95px">
+		    <m:Label text = "End Date" />
+		    <t:template>
+		        <m:Text text = " "/>
+		    </t:template>
+		</t:Column>
+		<t:Column width = "120px">
+		    <m:Label text = "Leave Availed" />
+		    <t:template>
+		        <m:Text text = " "/>
+		    </t:template>
+		</t:Column>
+		<t:Column width = "130px">
+		    <m:Label text = "Leave Balance" />
+		    <t:template>
+		        <m:Text text = " "/>
+		    </t:template>
+		</t:Column >
+		<t:Column  width = "90px">
+		    <m:Label text = "Selection" />
+		    <t:template>
+		       <m:Text text = " "/>
+		    </t:template>
+		</t:Column>
+		<t:Column  width = "80px">
+		    <m:Label text = "Remarks" />
+		    <t:template>
+		        <m:Text text = " "/>
+		    </t:template>
+		</t:Column>
+		</t:Table>
+			</m:Panel>  
+	</m:Panel>
+					
+	</l:Splitter>
+	
+	
+
+</core:View>

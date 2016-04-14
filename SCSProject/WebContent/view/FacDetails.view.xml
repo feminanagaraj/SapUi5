@@ -1,0 +1,70 @@
+<core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:f="sap.ui.layout.form" xmlns:e="sap.ui.layout" xmlns:h="sap.ui.layout.form"
+		controllerName="scs.view.FacDetails" xmlns:html="http://www.w3.org/1999/xhtml">
+	<Page title="Title" showHeader="false" showNavButton="true" navButtonTap="backtosel" class="Background">
+        <Toolbar class="BGCLR" >
+	        <Button icon="sap-icon://nav-back" press="backtosel"></Button>
+   		 	<ToolbarSpacer/>
+           	<Image src="images/scslogo.png" width="75px"></Image>
+            <ToolbarSpacer/>
+            <Button icon="sap-icon://menu2" id="openMenu" press="handlePressOpenMenu" ></Button>
+        </Toolbar>
+        <e:VerticalLayout width="100%">
+			<e:content>
+			</e:content>
+			<e:dependents>
+				<core:Fragment fragmentName="scs.view.menu" type="XML">
+				</core:Fragment>
+			</e:dependents>
+		</e:VerticalLayout>
+		<content>
+			<FlexBox inset="false"
+					 item="{/Products}"
+					 alignItems="Center"
+					 justifyContent="Center">
+				<f:SimpleForm 	maxContainerCols="2"
+								editable="true"
+								width="90%"
+								class="MRG5PX"
+								layout="ResponsiveGridLayout">
+					 <f:content>
+			 		    <Text text="{Name} Summary" id="facility_name" class="txtalign" design="Bold"/>
+							<HBox class="ALG_CTR WTH_50">
+								<Label text="Total Rooms"  design="Bold" />
+								<Input width="80px"  editable="false" />
+							</HBox>
+							<HBox class="ALG_CTR WTH_50">
+								<Label text="Total Bins" design="Bold"/>
+								<Input width="80px"  editable="false" />
+							</HBox>
+							<HBox class="ALG_CTR WTH_50">
+								<Label text="Available Capacity" design="Bold" />
+								<Input width="80px"  editable="false" />
+							</HBox>
+							<Panel class="MRG0AUT">
+								<HBox>
+									<Button id="room1" text="1" type="Reject" width="60px" press="GoToRoom" class="BTNCLR"/>
+									<Button text="2" type="Reject" width="60px" press="GoToRoom" class="BTNCLR PDG5RM"/>
+									<Button text="3" type="Reject" width="60px" press="GoToRoom" class="BTNCLR"/>
+								</HBox>
+								<HBox>
+									<Button text="4" type="Reject" width="60px" press="GoToRoom" class="BTNCLR"/>
+									<Text width="60px" class="PDG5RM"/>
+									<Button text="5" type="Reject" width="60px" press="GoToRoom" class="BTNCLR"/>
+								</HBox>
+								<HBox>
+									<Button text="6" type="Reject" width="60px" press="GoToRoom" class="BTNCLR"/>
+									<Text width="60px" class="PDG5RM"/>
+									<Button text="7" type="Reject" width="60px" press="GoToRoom" class="BTNCLR"/>
+								</HBox>
+								<HBox>
+								    <Button text="8" type="Reject" width="60px" press="GoToRoom" class="BTNCLR"/>
+								    <Text width="60px" class="PDG5RM" />
+								    <Button text="9" type="Reject" width="60px" press="GoToRoom" class="BTNCLR"/>
+								</HBox>
+							</Panel>
+					</f:content>
+				</f:SimpleForm>
+			</FlexBox>
+		</content>
+	</Page>
+</core:View>

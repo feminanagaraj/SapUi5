@@ -1,0 +1,21 @@
+<core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:f = "sap.ui.layout.form"
+		controllerName="demo.CSSdemo" xmlns:html="http://www.w3.org/1999/xhtml">
+	<Page title="CSS View" showHeader ="false" class = "MyBackgroundImage">
+	
+		<content>
+		<FlexBox height = "600px" alignItems = "Center" justifyContent = "Center">
+	<f:SimpleForm title = "Login Here...." maxContainerCols = "2" editable = "true">
+	<f:content>
+	    		
+		  <Label text = "User Name" ></Label>
+		  <Input width = "300px"></Input>
+		  <Label text = "Password"></Label>
+		  <Input width = "300px" type = "Password"></Input>
+		  <Label></Label>
+		  <Button text="Login" type="Reject" width ="100px"></Button>
+		</f:content>
+		</f:SimpleForm>
+		</FlexBox>
+		</content>
+	</Page>
+</core:View>

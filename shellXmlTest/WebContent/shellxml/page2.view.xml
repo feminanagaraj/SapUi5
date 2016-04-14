@@ -1,0 +1,12 @@
+<core:View xmlns:core="sap.ui.core" 
+           xmlns:mvc="sap.ui.core.mvc" 
+           xmlns="sap.ui.commons"
+		   controllerName="shellxml.page2"
+		   xmlns:m="sap.m" 
+		   xmlns:html="http://www.w3.org/1999/xhtml">
+<m:VBox>
+<Button text = "hi"></Button>
+<Button text = "sapta"></Button>
+<Label text = "Saptalabs"></Label>
+</m:VBox>
+</core:View>

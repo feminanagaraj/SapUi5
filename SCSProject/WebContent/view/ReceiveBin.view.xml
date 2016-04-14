@@ -1,0 +1,41 @@
+<core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m"  xmlns:f="sap.ui.layout.form" xmlns:l="sap.ui.layout"
+		controllerName="scs.view.ReceiveBin" xmlns:html="http://www.w3.org/1999/xhtml">
+	<Page title="Title" showHeader="false" showNavButton="true" navButtonTap="backtoroom" class="Background">
+	     <Toolbar class="BGCLR">
+	        <Button icon="sap-icon://nav-back" press="backtoroom"></Button>
+   		 	<ToolbarSpacer/>
+           	<Image src="images/scslogo.png" width="75px"></Image>
+            <ToolbarSpacer/>
+         	<Button icon="sap-icon://menu2" id="openMenu" press="handlePressOpenMenu" ></Button>
+        </Toolbar>
+        <l:VerticalLayout width="100%">
+			<l:content>
+			</l:content>
+			<l:dependents>
+				<core:Fragment fragmentName="scs.view.menu" type="XML">
+				</core:Fragment>
+			</l:dependents>
+		</l:VerticalLayout>
+		<content>
+			<FlexBox alignItems="Center"
+					 class="flexBox"
+					 justifyContent="Center">
+				<f:SimpleForm maxContainerCols="2"
+							  editable="true"
+							  width="90%"
+							  layout="ResponsiveGridLayout"
+							  class="MRG5PX">
+					<Text text="Receive Bin" class="txtalign" design="Bold"/>	
+					<Label text="Enter Bin Quantity" required="true" design="Bold" class="Label_REQ"/>
+					<Input />
+					<Label text="Content Description" required="true" design="Bold" class="Label_REQ"/>
+					<Input />
+					<Label text="Received From" required="true"  design="Bold" class="Label_REQ"/>
+					<Input />
+					<Label></Label>
+					<Button text="Save" type="Reject" width="100px" press="onLogin" class="MRG0AUT BTNCLR"/>
+				</f:SimpleForm>
+			</FlexBox>
+		</content>
+	</Page>
+</core:View>

@@ -1,0 +1,81 @@
+.Background{
+	background-color: #ddd;
+}
+.ButtonSize{
+	width: 15px;
+}
+.BGCLR{
+	background-color: #fff;
+	position: fixed;
+    width: 100%;
+    z-index: 1;
+}
+.MRG5PX{
+	margin : 5%;
+	margin-top : 15%;
+}
+/* #idroomdetails--table_color .sapUiTableCnt .sapUiTableColHdrCnt{
+	background-color : green !important;
+}  */
+.login_MRG5PX{
+	margin : 5%;
+}
+.MRG0AUT{
+	margin: 0 auto;
+    display: table;
+}
+.BTNCLR .sapMBtnInner {
+	background-color: #7A1316 !important;
+    border-color: #7A1316 !important;
+}
+.BTNCLR .sapMBtnInner:hover {
+	background-color: #416632 !important;
+}
+.Label_REQ::before{
+	content : "";
+}
+.Label_REQ::after{
+	content : " *" !important;
+	color : red;
+}
+.BRDRDS .sapUiFormResGridCont{
+	border-radius : 5px;
+}
+.room_flex{
+	margin : 0 auto;
+	height : 100%;
+}
+
+/* .sapUiRespGridMedia-Std-Phone.sapUiRespGridHSpace0>.sapUiRespGridSpanS12{
+	width : 50% !important;
+} */
+.hide{
+	display : none !important;
+}
+.show{
+	display : block !important;
+	float : right;
+}
+.txtalign {
+	text-align : center !important;
+	font-size : 23px;
+	width : 100%;
+}
+.MRG0AUT .sapMPanelContent{
+	margin: 0 auto;
+    display: table;
+    border-bottom: none;
+}
+.sapMDialog{
+	min-width : 0 !important;
+}
+.ALG_CTR{
+	align-items : center;
+}
+.WTH_50 .sapMFlexItem{
+	width : 50%;
+	text-align : right;
+}
+.PDG5RM{
+	margin : 0 0.5rem;
+}

@@ -1,0 +1,10 @@
+<core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:cmn="sap.ui.commons"
+		controllerName="tabcontl.tab" xmlns:html="http://www.w3.org/1999/xhtml">
+	<IconTabFilter text="Data" icon="sap-icon://documents" press="onData">
+    <content press="onData" id="data">
+        <cmn:Tree nodes="{/aRoot}">
+            <cmn:TreeNode text="{@name} TagNameHere?"></cmn:TreeNode>
+        </cmn:Tree>
+    </content>
+</IconTabFilter>
+</core:View>

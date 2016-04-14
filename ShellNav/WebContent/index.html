@@ -1,0 +1,84 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta http-equiv='Content-Type' content='text/html;charset=UTF-8'/>
+
+		<script src="resources/sap-ui-core.js"
+				id="sap-ui-bootstrap"
+				data-sap-ui-libs="sap.m,sap.ui.commons,sap.ui.ux3"
+				data-sap-ui-theme="sap_bluecrystal">
+		</script>
+		<!-- only load the mobile lib "sap.m" and the "sap_bluecrystal" theme -->
+
+		<script>
+				sap.ui.localResources("shellnav");
+				jQuery.sap.require("sap.ui.core.routing.Router");
+				jQuery.sap.require("sap.ui.core.routing.HashChanger");
+				
+				var oShell = sap.ui.ux3.Shell("shellId", {
+					appTitle: "Demo",
+					showLogoutButton: false,
+					showSearchTool: false,
+					worksetItems: [
+					            new sap.ui.ux3.NavigationItem("page1Id",{
+					            	key: "Page1",
+					            	text: "Page1"
+					            }),
+					            new sap.ui.ux3.NavigationItem("page2Id", {
+					            	key: "Page2",
+					            	text: "Page2"
+					            })
+					],
+					worksetItemSelected: function(e) {
+						this.removeAllContent();
+						
+						var selected = e.getParameter("key");
+						var oHashChanger = new sap.ui.core.routing.HashChanger();
+						oHashChanger.setHash(oRouter.getURL(selected));
+						
+					}
+					
+				});
+				
+				oShell.placeAt('container');
+				
+				var oRouter = new sap.ui.core.routing.Router([
+				                          				   {
+				                          					   pattern: "",
+				                          					   name: "Page1",
+				                          					   view: "Demo.Page1",
+				                          					   viewType: sap.ui.core.mvc.ViewType.XML,
+				                          					   targetControl: "shellId",
+				                          					   targetAggregation: "content", //content/Page
+				                          					   clearTarget: true,
+				                          					   callback: function() {
+				                          						   oShell.setSelectedWorksetItem("page1Id");
+				                          					   }
+				                          				   },
+				                          				   {
+				                          					   pattern: ["Profile", "Page2"],
+				                          					   name: "Page2",
+				                          					   view: "Demo.Page2",
+				                          					   viewType: sap.ui.core.mvc.ViewType.XML,
+				                          					   targetControl: "shellId",
+				                          					   targetAggregation: "content", 
+				                          					   clearTarget: true,
+				                          					   callback: function() {
+				                          						   oShell.setSelectedWorksetItem("page2Id");
+				                          					   }
+				                          				   } 
+				                          				                                             
+				                          				                                             
+				                          				]); 
+				                          				
+				                          				oRouter.register("appRouter");
+				                          				oRouter.initialize();
+				                          				
+				
+		</script>
+	</head>
+	<body class="sapUiBody" role="application">
+		<div id="content"></div>
+	</body>
+</html>

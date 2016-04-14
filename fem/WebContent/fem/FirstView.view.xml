@@ -1,0 +1,22 @@
+<core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m"
+		controllerName="fem.FirstView" xmlns:html="http://www.w3.org/1999/xhtml">
+	<Page title="First View">
+		<content>
+	<Label text ="Enter id" width ="200px"></Label>
+	<Input width = "300px"></Input>
+	<Label></Label>
+	<Button text = "Click Me" type = "Emphasize" press="onClick"></Button>
+		</content>
+		<footer>
+		    <Bar>
+			    <contentMiddle>
+			        <Text text = "@all copy rights reserved"></Text>
+			    </contentMiddle>
+			    <contentRight>
+			        <Button text ="Next Page" press ="onClick"></Button>
+			    </contentRight>
+		    </Bar>
+		</footer>
+		
+	</Page>
+</core:View>

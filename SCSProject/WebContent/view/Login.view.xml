@@ -1,0 +1,27 @@
+<core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:f="sap.ui.layout.form" 
+		controllerName="scs.view.Login" xmlns:html="http://www.w3.org/1999/xhtml">
+	<Page title="Title" showHeader="false" class="Background">
+		<content>
+			<FlexBox height="100%"
+			    	 inset="false"
+					 alignItems="Center"
+					 justifyContent="Center">
+				<f:SimpleForm 	maxContainerCols="2"
+								editable="true"
+								width="90%"
+								layout="ResponsiveGridLayout"
+								class="BRDRDS login_MRG5PX">
+					 <f:content>
+						<Image src="images/scslogo.png" width="200px" class="MRG0AUT"/>
+						<Label text="User Name" required="true" design="Bold" class="Label_REQ"/>
+						<Input type="text" width="250px" editable="true" class=""/>
+						<Label text="Password" required="true" design="Bold" class="Label_REQ" />
+						<Input type="Password" width="250px"  editable="true" class=""/>
+						<Label></Label>
+						<Button text="Submit" type="Reject" width="100px" press="onLogin" class="MRG0AUT BTNCLR"/>
+					</f:content>
+				</f:SimpleForm>
+			</FlexBox>
+		</content>
+	</Page>
+</core:View>

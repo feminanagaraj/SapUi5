@@ -1,0 +1,35 @@
+<core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:f="sap.ui.layout.form" xmlns:l="sap.ui.layout"
+		controllerName="scs.view.SelectFacility" xmlns:html="http://www.w3.org/1999/xhtml">
+	<Page title="Title" showHeader="false" class="Background">
+	    <Toolbar class="BGCLR">
+   		 	<ToolbarSpacer/>
+           	<Image src="images/scslogo.png" width="75px"></Image>
+            <ToolbarSpacer/>
+             <Button icon="sap-icon://menu2" id="openMenu" press="handlePressOpenMenu"></Button>
+        </Toolbar>
+        <l:VerticalLayout width="100%">
+			<l:content>
+			</l:content>
+			<l:dependents>
+				<core:Fragment fragmentName="scs.view.menu" type="XML">
+				</core:Fragment>
+			</l:dependents>
+		</l:VerticalLayout>
+		<content>
+		    <FlexBox inset="false"
+					 alignItems="Center"
+					 justifyContent="Center">
+			<f:SimpleForm editable="true" width="90%" layout="ResponsiveGridLayout" class="MRG5PX">
+			    <f:content>
+			        <Text text="Facilities" class="txtalign" design="Bold"/>
+					<!-- <Label text="FACILITIES" design="Bold" width="250px"></Label> -->
+					<ComboBox id="comboid" items="{/Products}" width="250px" selectionChange="onChange">
+						<core:Item text="{Name}">
+						</core:Item>
+					</ComboBox>
+				</f:content>
+			</f:SimpleForm>
+			</FlexBox>
+		</content>
+	</Page>
+</core:View>

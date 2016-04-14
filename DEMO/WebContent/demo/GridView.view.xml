@@ -1,0 +1,83 @@
+<core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:l ="sap.ui.layout"
+		controllerName="demo.GridView" xmlns:html="http://www.w3.org/1999/xhtml">
+	<Page title="Title">
+	
+		<content>
+	    <Panel headerText = "Employee Details">
+	        <l:Grid>
+	            <l:content>
+	               <Label text = "Enter the Employee Id">
+	                   <layoutData>
+	                       <l:GridData span = "L3 M3 S12"></l:GridData>
+	                   </layoutData>
+	               </Label>
+	               <Input type="Test">
+	                   <layoutData>
+	                       <l:GridData span = "L3 M3 S12"></l:GridData>
+	                   </layoutData>
+	               </Input>
+	               
+	               <Label text = "Enter the Employee Name">
+	                   <layoutData>
+	                       <l:GridData span = "L3 M3 S12"></l:GridData>
+	                   </layoutData>
+	               </Label>
+	               <Input type="Test">
+	                   <layoutData>
+	                       <l:GridData span = "L3 M3 S12"></l:GridData>
+	                   </layoutData>
+	               </Input>
+	               
+	               <Label text = "Enter the Employee Designation">
+	                   <layoutData>
+	                       <l:GridData span = "L3 M3 S12"></l:GridData>
+	                   </layoutData>
+	               </Label>
+	               <Input type="Test">
+	                   <layoutData>
+	                       <l:GridData span = "L3 M3 S12"></l:GridData>
+	                   </layoutData>
+	               </Input>
+	               
+	               <Label text = "Enter the Employee Email">
+	                   <layoutData>
+	                       <l:GridData span = "L3 M3 S12"></l:GridData>
+	                   </layoutData>
+	               </Label>
+	               <Input type="Test">
+	                   <layoutData>
+	                       <l:GridData span = "L3 M3 S12"></l:GridData>
+	                   </layoutData>
+	               </Input>
+	               
+	               
+	               
+	               <Label text = "Enter the Employee Phone">
+	                   <layoutData>
+	                       <l:GridData span = "L3 M3 S12"></l:GridData>
+	                   </layoutData>
+	               </Label>
+	               <Input type="Test">
+	                   <layoutData>
+	                       <l:GridData span = "L3 M3 S12"></l:GridData>
+	                   </layoutData>
+	               </Input>
+	               
+	               
+	               <Label text = "Enter the Employee Pincode">
+	                   <layoutData>
+	                       <l:GridData span = "L3 M3 S12"></l:GridData>
+	                   </layoutData>
+	               </Label>
+	               <Input type="Test">
+	                   <layoutData>
+	                       <l:GridData span = "L3 M3 S12"></l:GridData>
+	                   </layoutData>
+	               </Input>
+	              
+	            </l:content>
+	        </l:Grid>
+	    </Panel>      
+		</content>
+	</Page>
+</core:View>

@@ -1,0 +1,34 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta http-equiv='Content-Type' content='text/html;charset=UTF-8'/>
+
+		<script src="resources/sap-ui-core.js"
+				id="sap-ui-bootstrap"
+				data-sap-ui-libs="sap.m"
+				data-sap-ui-theme="sap_bluecrystal">
+		</script>
+		<!-- only load the mobile lib "sap.m" and the "sap_bluecrystal" theme -->
+
+		<script>
+				sap.ui.localResources("demo");
+				var app = new sap.m.App({initialPage:"idFirstView1"});
+				
+				var page = sap.ui.view({id:"idFirstView1", viewName:"demo.FirstView", type:sap.ui.core.mvc.ViewType.XML});
+				var page2 = sap.ui.view({id:"idsecondview", viewName:"demo.SecondView", type:sap.ui.core.mvc.ViewType.XML});
+				var page3 = sap.ui.view({id:"idgridview", viewName:"demo.GridView", type:sap.ui.core.mvc.ViewType.XML});
+				var page4 = sap.ui.view({id:"idcssview", viewName:"demo.CSSdemo", type:sap.ui.core.mvc.ViewType.XML});
+				
+				app.addPage(page);
+				app.addPage(page2);
+				app.addPage(page3);
+				app.addPage(page4);
+				app.placeAt("content");
+		</script>
+<link rel = "stylesheet" href = "CSS/main.css">
+	</head>
+	<body class="sapUiBody" role="application">
+		<div id="content"></div>
+	</body>
+</html>
