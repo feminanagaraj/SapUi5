@@ -1,0 +1,127 @@
+tr:nth-child(even) {background: #c3c3c3!important}
+tr:nth-child(odd) {background: white !important}
+ 
+ th {
+    background-color: #284695 !important;
+   
+}
+#viewId--idTable-listUl_paginate{
+	float:right;
+}
+#viewId--idTable-listUl_info{
+	width:65%;
+	float:left;
+	padding: 20px;
+}
+#viewId--idTable-listUl_previous, #viewId--idTable-listUl_next{
+    padding: 10px;
+    border: 2px solid;
+    position: relative;
+    display: inline-block;
+}
+#viewId--idTable-listUl_filter {
+	
+	float: right;
+}
+#viewId--idTable-listUl_length{
+    width: 50%;
+    display: inline-block;
+}
+#__panel0-cont{
+	background: #284695;
+}
+#__shell0-content{
+	background: whitesmoke;
+}
+table, td, th {    
+    border: 1px solid #ddd;
+    text-align: left; 
+     padding: 8px !important;
+}
+#__shell0-wsBar {
+	
+	font-style : italic;
+	font-size : 12px;
+}
+#viewId--idTable-listUl thead  .sapMText {
+	color: whitesmoke !important;
+	font-size: 14px !important;
+}
+.sapUiUx3NavBarToplevel .sapUiUx3NavBarItemSel>a {
+    font-size: 20px;
+    color: #284695;
+}
+/* td, th {
+    padding: 10px !important;
+} */
+ .sapMObjectIdentifierText {
+    
+    font-size: 12px !important;
+    
+}
+ .sapUiUx3ShellCanvas {
+     background-color: #ddd;
+ }
+ .sapUiUx3ShellHeader>.sapUiUx3ShellHeaderTitleLeft>img {
+  
+   
+    margin-top: 10px;
+    max-height: 30px;
+}
+
+.sapUiPanelHdr {
+   
+    background-color: #284695 !important;
+    min-height: 30px !important;
+    background-image : none !important;
+}
+
+.sapUiPanelHeightSet>.sapUiPanelCont {
+    top: 30px !important;
+}
+
+.sapUiPanelTitle.sapUiTvH5 {
+    font-size: 16px;
+}
+.sapUiPanelCont{
+	    border-top-color: #284695 !important;
+}
+.sapUiUx3NavBarToplevel .sapUiUx3NavBarDummyItem {
+     display: none;
+}
+a {
+    color: #284695 !important;
+ }
+ 
+ .sapUiTree {
+    color: white !important;
+    font-size: 12px;
+    font-style: italic;
+    font-weight: bold;
+ }
+ 
+ .sapUiTreeCont {
+       border: none !important;
+       background-color: rgba(255,255,255,0) !important;
+}
+.sapUiTreeHeader {
+    background-color: rgba(255,255,255,0)!important;
+    border: 1px solid rgba(255,255,255,0)!important;
+   
+}
+#viewId--tree1-CollapseAll-img{
+	display : none;
+}
+#viewId--tree1-ExpandAll-img{
+	display: none;
+}
+.sapUiTreeNode:Hover {
+    border: 5px solid white;
+    background-color: white;
+    color: #284695;
+}
+.sapUiTreeNodeSelected, .sapUiTreeNodeSelected:Hover {
+    border: 5px solid white;
+    background-color: white;
+    color: #284695;
+}

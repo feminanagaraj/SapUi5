@@ -1,0 +1,79 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta http-equiv='Content-Type' content='text/html;charset=UTF-8'/>
+		
+
+		<script src="resources/sap-ui-core.js"
+				id="sap-ui-bootstrap"
+				data-sap-ui-libs="sap.ui.commons ,sap.ui.unified,sap.ui.ux3"
+				data-sap-ui-theme="sap_platinum">
+		</script>
+		<script type="text/javascript" 
+		        charset="utf8" 
+		        src="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/jquery.dataTables.min.js">
+		</script>
+ 
+		<!-- add sap.ui.table,sap.ui.ux3 and/or other libraries to 'data-sap-ui-libs' if required -->
+
+		<script>
+				sap.ui.localResources("shellxml");
+				
+				
+				var oShell = sap.ui.ux3.Shell({
+					    showSearchTool : false,
+						showFeederTool : false,
+						showLogoutButton : false,
+						appIcon : "images/saptalogo.png",
+						worksetItems : [
+						               
+						                new sap.ui.ux3.NavigationItem("pageId",{
+					                		key  : "wi_Manager", 
+					                		text : "Manager"
+						                }),
+						                new sap.ui.ux3.NavigationItem("page2Id",{
+						                	key : "wi_ss",
+						                	text : "Self Services"
+						                }),
+						                new sap.ui.ux3.NavigationItem("page3Id",{
+					                		key  : "wi_ts", 
+					                		text : "Tax Statement"
+						                }),
+						                new sap.ui.ux3.NavigationItem("page4Id",{
+					                		key  : "wi_fpp", 
+					                		text : "Flexi Pay Plan"
+						                }),
+						                new sap.ui.ux3.NavigationItem("page5Id",{
+					                		key  : "wi_ua", 
+					                		text : "User Administration"
+						                }),
+						                new sap.ui.ux3.NavigationItem("page6Id",{
+					                		key  : "wi_pn", 
+					                		text : "Policies and Newsletters"
+					               		}),
+						                ], 
+						                
+				
+					content : [new sap.ui.view({
+						id : "viewId",
+						 viewName : "shellxml.App", 
+						
+						 type:sap.ui.core.mvc.ViewType.XML
+						
+					})]
+						
+					});
+					
+					oShell.placeAt("content");
+				
+					
+					
+		</script>
+<link rel = "stylesheet" href = "css/main.css">
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	</head>
+	<body class="sapUiBody" role="application">
+		<div id="content"></div>
+	</body>
+</html>

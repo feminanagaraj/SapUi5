@@ -1,0 +1,7 @@
+<core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.ui.commons"
+			controllerName="shellxml.page2" xmlns:html="http://www.w3.org/1999/xhtml">
+<Button text = "hi"></Button>
+<Button text = "hi"></Button>
+<Button text = "hi"></Button>
+<Button text = "hi"></Button>
+</core:View>

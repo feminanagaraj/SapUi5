@@ -1,0 +1,83 @@
+<core:View xmlns:core="sap.ui.core" 
+           xmlns:mvc="sap.ui.core.mvc" 
+           xmlns="sap.ui.commons"
+           xmlns:l="sap.ui.layout" 
+		   controllerName="shellxml.App" 
+		   xmlns:html="http://www.w3.org/1999/xhtml"
+		   xmlns:t = "sap.ui.table"
+		   xmlns:f= "sap.ui.layout.form"
+		   xmlns:m="sap.m">
+
+ <l:Splitter id="mainSplitter" height="500px" width="100%">
+			<Panel height="100%" width="100%" showCollapseIcon = "false">
+						<layoutData><l:SplitterLayoutData size="200px" /></layoutData>
+											
+				        <Tree id="tree1" >
+								<TreeNode text = "Manager Approval" expanded = "true" selectable = "true">
+										<nodes>
+												<TreeNode text = "Attendence" />
+												<TreeNode text = "Absence Requests for Approval" />
+										</nodes>
+								</TreeNode>
+								<TreeNode text = "Leave History" expanded = "false" selectable = "true">
+										<nodes>
+												<TreeNode text = "Leave Balance" />
+												<TreeNode text = "Leave Availed" />
+										</nodes>
+								</TreeNode>
+						</Tree>
+						   
+			</Panel>
+			
+		    <Panel height="100%" width="100%" text="Managers Approval" showCollapseIcon ="false">
+					<layoutData><l:SplitterLayoutData size="auto" /></layoutData>
+						<m:Label text = "Attendace/Absence Requests for Approval"/> 
+				     		<m:Panel   width="100%">
+										
+					        	<m:Table id="idTable"		        
+						             	 mode="Single" 
+						           	     selectionChange ="attachSelectionChange"	
+						                 items= "{ui5LeaveModel>/leaveList}" class="myclass">
+						      		<m:columns class = "customColor">
+										<m:Column >
+											<m:Text text="Leave Request ID" key="1" />
+										</m:Column>
+										<m:Column class = "customColor">
+											<m:Text text="Request Date" key="2"/>
+										</m:Column>
+										<m:Column >
+											<m:Text text="Name" key="3"/>
+										</m:Column>
+										<m:Column >
+											<m:Text text="Leave Availed" key="8"/>
+										</m:Column>
+										<m:Column >
+											<m:Text text="Leave Balance" key="9"/>
+										</m:Column>
+										<m:Column >
+											<m:Text text="Selection" key="10"/>
+										</m:Column>
+										<m:Column >
+											<m:Text text="Remarks" key="11"/>
+										</m:Column>
+									</m:columns>
+									
+									<m:items>
+										<m:ColumnListItem vAlign="Middle">
+											<m:cells >
+												<m:ObjectIdentifier text="{ui5LeaveModel>leaveReqId}" />
+												<m:ObjectIdentifier text="{ui5LeaveModel>requestdate}" />			
+												<m:ObjectIdentifier text="{ui5LeaveModel>name}" />
+												<m:ObjectIdentifier text="{ui5LeaveModel>levAvai}" />
+												<m:ObjectIdentifier text="{ui5LeaveModel>levBal}" />
+												<m:ObjectIdentifier text="{ui5LeaveModel>selection}" />
+												<m:ObjectIdentifier text="{ui5LeaveModel>remarks}" />	
+											</m:cells>
+										</m:ColumnListItem>
+									</m:items>		      
+								</m:Table>
+							</m:Panel>
+						</Panel>
+					</l:Splitter>
+
+</core:View>
